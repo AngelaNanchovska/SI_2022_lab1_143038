@@ -1,0 +1,120 @@
+4. $ git clone https://github.com/AngelaNanchovska/SI_2022_lab1_143038.git (клонирање на репозиториумот локално)
+   $ cd SI_2022_lab1_143038 (влез во папката)
+5. $ notepad shopping_list.txt (отварање на txt документот)
+   $ git add . (додавање во staging area)
+   $ git commit -m "Add 5 items to the shopping list" (commit на изменатите фајлови)
+6. $ notepad shopping_list.txt (отварање на txt документот)
+   $ git add . (додавање во staging area)
+   $ git commit -m "Add quantities to the items." (commit на изменатите фајлови)
+7. $ git branch branch1 (создавање на нова гранка)
+   $ git branch branch2 (создавање на нова гранка)
+------------------------------------------------------------------------------------
+8. $ git log (преглед на досегашните логови)
+commit 93452086a212f1e94a2411a45a93bcad7bc7cffd (HEAD -> master, branch2, branch1)
+Author: nancovskaangela@gmail.com <nancovskaangela@gmail.com>
+Date:   Sat Apr 9 19:37:13 2022 +0200
+
+    Add quantities to the items
+
+commit cf3e21fecfcd89765e795ee6fd6d42accf7c451a
+Author: nancovskaangela@gmail.com <nancovskaangela@gmail.com>
+Date:   Sat Apr 9 19:35:57 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 08216fcba6c2048d20e6644d8f988bd7164aaca2 (origin/master, origin/HEAD)
+Author: AngelaNanchovska <53618093+AngelaNanchovska@users.noreply.github.com>
+Date:   Sat Apr 9 18:35:47 2022 +0200
+
+    Initial commit
+
+commit e43bedf9613dea58f37be315c62ce0be8f3c79fa
+Author: AngelaNanchovska <53618093+AngelaNanchovska@users.noreply.github.com>
+Date:   Sat Apr 9 18:35:27 2022 +0200
+-----------------------------------------------------------------------------------
+9.  $ git push origin master (синхронизирање на master со github)
+    $ git push origin branch1 (синхронизирање на branch1 со github)
+    $ git push origin branch2 (синхронизирање на branch2 со github)
+10. $ git checkout branch1 (префрлување на гранката branch1)
+11. $ notepad shopping_list.txt (отварање на txt документот)
+    $ git add . (додавање во staging area)
+    $ git commit -m "Change quantity of item #5"(commit на изменатите фајлови)
+12. $ git checkout master (префрлување на гранката master)
+13. $ notepad shopping_list.txt (отварање на txt документот)
+    $ git add . (додавање во staging area)
+    $ git commit -m "Change quantity of item #2" (commit на изменатите фајлови)
+14. $ git push origin master (синхронизирање на master со github)
+    $ git push origin branch1 (синхронизирање на branch1 со github)
+    $ git push origin branch2 (синхронизирање на branch2 со github)
+15. $ git checkout branch2 (префрлување на гранката branch2)
+16. $ notepad shopping_list.txt (отварање на txt документот)
+    $ git add . (додавање во staging area)
+    $ git commit -m "Modify item #4" (commit на изменатите фајлови)
+-----------------------------------------------------------------------------------
+17. $ git log (преглед на досегашните логови)
+commit 0b9820fa2b474223e58acb691d47da888fbca7a3 (HEAD -> branch2)
+Author: nancovskaangela@gmail.com <nancovskaangela@gmail.com>
+Date:   Sat Apr 9 19:45:43 2022 +0200
+
+    Modify item #4
+
+commit 93452086a212f1e94a2411a45a93bcad7bc7cffd (origin/branch2)
+Author: nancovskaangela@gmail.com <nancovskaangela@gmail.com>
+Date:   Sat Apr 9 19:37:13 2022 +0200
+
+    Add quantities to the items
+
+commit cf3e21fecfcd89765e795ee6fd6d42accf7c451a
+Author: nancovskaangela@gmail.com <nancovskaangela@gmail.com>
+Date:   Sat Apr 9 19:35:57 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 08216fcba6c2048d20e6644d8f988bd7164aaca2
+Author: AngelaNanchovska <53618093+AngelaNanchovska@users.noreply.github.com>
+Date:   Sat Apr 9 18:35:47 2022 +0200
+
+    Initial commit
+-----------------------------------------------------------------------------------
+18. $ notepad shopping_list.txt (отварање на txt документот)
+    $ git commit --amend -m "Modify item #4 and add item #6" (измена на пораката на претходниот commit)
+    $ git add . (додавање во staging area)
+    $ git commit -m "Modify item #4 and add item #6" (commit на изменатите фајлови)
+-----------------------------------------------------------------------------------
+19. $ git log (преглед на досегашните логови)
+commit 573c5a5ec9ead1f85ef7006489f727d94f6cdf53 (HEAD -> branch2)
+Author: nancovskaangela@gmail.com <nancovskaangela@gmail.com>
+Date:   Sat Apr 9 19:48:27 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 6bd1c669d96a9a14aa96ea3f081b2c85d78c0b41
+Author: nancovskaangela@gmail.com <nancovskaangela@gmail.com>
+Date:   Sat Apr 9 19:45:43 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 93452086a212f1e94a2411a45a93bcad7bc7cffd (origin/branch2)
+Author: nancovskaangela@gmail.com <nancovskaangela@gmail.com>
+Date:   Sat Apr 9 19:37:13 2022 +0200
+
+    Add quantities to the items
+
+commit cf3e21fecfcd89765e795ee6fd6d42accf7c451a
+Author: nancovskaangela@gmail.com <nancovskaangela@gmail.com>
+Date:   Sat Apr 9 19:35:57 2022 +0200
+
+    Add 5 items to the shopping list
+-----------------------------------------------------------------------------------
+20. $ git checkout master (префрлување на гранката master)
+    $ git merge branch1 (успешно спојување на гранката branch1 кон гранката master со fast forward стратегија)
+21. $ git merge branch2 (спојувањето на гранката branch2 кон гранката master е со конфликт)
+    popravka vo shopping_list.txt 
+    $ git merge branch2 (откако ќе ги средиме конфликтите, гранката branch2 ќе се спои со гранката master со recursive стратегија)
+    $ git add shopping_list.txt && git commit -m "Merge branch 'branch2'" (додавање во staging area и commit на изменатите фајлови)
+22. $ notepad 143038.txt (отварање на txt документот)
+    $ git add . (додавање во staging area)
+    $ git commit -m "Add docs" (commit на изменатите фајлови)
+23. $ git push origin master (синхронизирање на master со github)
+    $ git push origin branch1 (синхронизирање на branch1 со github)
+    $ git push origin branch2 (синхронизирање на branch2 со github)
